@@ -52,7 +52,8 @@ resource "google_compute_instance" "default" {
 
 // 
 // metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python-pip rsync"
-metadata_startup_script = “${file(“argo-client-vm/argo-client-config.sh”)}”
+metadata_startup_script = file(“config-scripts/ansible.inst.sh”)
+
  network_interface {
    network = "default"
 
