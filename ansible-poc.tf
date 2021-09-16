@@ -34,11 +34,9 @@ resource "google_compute_network" "default" {
 // A single Compute Engine instance
 resource "google_compute_instance" "default" {
  // name         = "prografana-poc-vm-${random_id.instance_id.hex}"
- name = "Ansible-client-poc"
+ name = "ansible-client-poc"
  machine_type = "e2-medium"
  zone         = "asia-south1-c"
- preemptible  = "true"
-
  tags = ["web", "fw-poc"]
  labels = {
    "purpose" = "poc"
@@ -52,7 +50,7 @@ resource "google_compute_instance" "default" {
 
 // 
 // metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python-pip rsync"
-metadata_startup_script = file("ansible-inst.sh")
+metadata_startup_script = file("config.sh")
 
  network_interface {
    network = "default"
