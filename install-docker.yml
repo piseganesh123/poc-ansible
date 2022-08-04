@@ -48,7 +48,7 @@
       user:
         name: "ganesh"
         group: "docker"
-        append: yes
+#        append: yes
       tags:
         - docker
 
@@ -95,7 +95,7 @@
       register: aws_cli_unarchive_installer
 
     - name: Install awscli package.
-      shell: /tmp/awscli-bundle/install 
+      shell: /tmp/aws/install 
       #-i /usr/local/aws -b /usr/bin/aws
       args:
         creates: /usr/bin/aws
