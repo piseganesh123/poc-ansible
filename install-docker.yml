@@ -39,8 +39,8 @@
 
     - name: Update apt and install docker-ce
       apt:
-        name: docker-ce
-        state: latest
+        name: docker-ce=5:20.10.11~3-0~ubuntu-focal
+        state: present
         update_cache: true
 
     - name: Add "current" user to "docker" group
