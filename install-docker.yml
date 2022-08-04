@@ -99,4 +99,4 @@
       #-i /usr/local/aws -b /usr/bin/aws
       args:
         creates: /usr/bin/aws
-      when: aws_cli_unarchive_installer.changed
+#      when: aws_cli_unarchive_installer.changed
