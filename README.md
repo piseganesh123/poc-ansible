@@ -11,3 +11,11 @@ $ ansible-playbook site.yml -l localhost
 install docker
 
 $ ansible-playbook install-docker.yml -l localhost
+
+TO run ansible on specific node / host, add those server entries in /etc/hosts file 
+
+$ ansible-playbook install-docker.yml -i ./hosts -l <remote-srv-1> --private-key <.id_rsa>
+
+You can remove ansible using 
+
+$sudo apt remove ansible
