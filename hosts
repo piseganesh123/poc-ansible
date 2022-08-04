@@ -1,5 +1,6 @@
     [webservers]
     localhost
+    remote-srv-1
 
     [dbservers]
     bensible

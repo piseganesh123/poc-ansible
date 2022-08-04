@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: webservers
   become: true
   vars:
     container_count: 1
@@ -44,7 +44,7 @@
         update_cache: true
 
     - name: Add "current" user to "docker" group
-      remote_user: ansible_ubuntu_demo
+      remote_user: ganesh
       user:
         name: "ganesh"
         group: "docker"
